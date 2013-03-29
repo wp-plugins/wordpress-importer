@@ -589,6 +589,7 @@ class WP_Import extends WP_Importer {
 					'post_type' => $post['post_type'], 'post_password' => $post['post_password']
 				);
 
+				$original_post_ID = $post['post_id'];
 				$postdata = apply_filters( 'wp_import_post_data_processed', $postdata, $post );
 
 				if ( 'attachment' == $postdata['post_type'] ) {
